@@ -7,4 +7,4 @@ def load_data():
 
 data = load_data()
 
-print(data)
+st.write(data)
