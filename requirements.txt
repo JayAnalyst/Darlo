@@ -1,1 +1,4 @@
-mplsoccer == 1.2.4
+mplsoccer
+pandas
+plotly
+streamlit
