@@ -20,7 +20,7 @@ if positions == 'Central Defenders':
     params = ['stopper','central defender','ball player','ball carrier','average rating']
     minvalues = data2.iloc[:,2:7].min().values.tolist()
     maxvalues = data2.iloc[:,2:7].max().values.tolist()
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     with col1:
         create_pizza_plots(data2,[0],params,minvalues,maxvalues)
     with col2:
