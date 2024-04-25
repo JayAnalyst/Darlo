@@ -32,11 +32,11 @@ def create_pizza_plots(data, indices, params, minvalues, maxvalues):
                 zorder=1, linewidth=1
             ),  # values to be used when plotting slices
             kwargs_params=dict(
-                color="k", fontsize=4, zorder=5,
+                color="k", fontsize=8, zorder=5,
                 fontproperties=font_normal, va="center"
             ),  # values to be used when adding parameter
             kwargs_values=dict(
-                color="k", fontsize=4,
+                color="k", fontsize=8,
                 fontproperties=font_normal, zorder=3,
                 bbox=dict(
                     edgecolor="#000000", facecolor="#1A78CF",
@@ -48,7 +48,7 @@ def create_pizza_plots(data, indices, params, minvalues, maxvalues):
         # Turn off the axes
 
         # Add a title and subtitle
-        fig.text(0.5, 0.95, f"{data['name'][i]} - {data['current_team_name'][i]}", size=6, ha="center", color="k")
+        fig.text(0.5, 0.95, f"{data['name'][i]} - {data['current_team_name'][i]}", size=12, ha="center", color="k")
         #fig.text(0.0, 0.90, f"Minutes played - {data['total_matches'][i]}", size=30, ha="center", fontproperties=font_bold, color="lightgrey")
         #fig.text(0.0, 0.85, f"Z Score = {round(data['z_score'][i], 2)}", size=30, ha='center', fontproperties=font_bold, color='lightgrey')
         
