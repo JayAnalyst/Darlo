@@ -22,9 +22,9 @@ if positions == 'Central Defenders':
     maxvalues = data2.iloc[:,2:7].max().values.tolist()
     col1, col2 = st.columns(2)
     with col1:
-        create_pizza_plots(data2,[0],params,minvalues,maxvalues)
+        create_pizza_plots(data2,0,params,minvalues,maxvalues)
     with col2:
-        create_pizza_plots(data2,[1],params,minvalues,maxvalues)
+        create_pizza_plots(data2,1,params,minvalues,maxvalues)
     
     
     
