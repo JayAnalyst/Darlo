@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.set_page_config(layout="wide")
 
 def load_cbs_data():
-    path = '.Positions/central_defenders.csv'
+    path = 'central_defenders.csv'
     return pd.read_csv(path)
 positions = st.selectbox(label='Select position',options = ['Central Defenders'])
 if positions == 'Central Defenders':
