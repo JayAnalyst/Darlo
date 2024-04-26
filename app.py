@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd 
-from data_vizzes import create_pizza_plots
+from data_vizzes import create_pizza_plots,setup_and_find_similar_players
 from mplsoccer import PyPizza, add_image, FontManager
 import matplotlib.pyplot as plt 
 st.set_page_config(layout="wide")
@@ -38,6 +38,14 @@ if positions == 'Central Midfielders':
     roles = st.selectbox(label='Select Role',options = ['Regista_rating','Creative_playmaker_rating','Defensive_midfielder_rating','Box_to_box_rating','Central_midfielder_general_rating','avg_rating'])
     data = load_cms_data()
     data1 = st.dataframe(data.iloc[:,1:].drop_duplicates().reset_index(drop='index').sort_values(roles,ascending=False).reset_index(drop='index'))
+    st.divider()
+    col1,col2 = st.columns(2)
+
+    with col1:
+        st.header('Player Similarity Search')
+        player=st.selectbox('Select player',options=data.name.unique().tolist())
+    with col2:
+        setup_and_find_similar_players(data,player,5)
 
     
 
