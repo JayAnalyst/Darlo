@@ -56,6 +56,9 @@ def similarcbs(df, player_name, num_players=5):
     
     player_distances = distance_df[player_name].sort_values()
     similar_players = player_distances.iloc[1:num_players+1].index.tolist()
+    if similar_players:
+        simplayer = df_clean[df_clean['name'].isin(similar_players)].reset_index(drop=True)
+        return simplayer
+    else:
+        return "No similar players."
     
-    simplayer = df_clean[df_clean['name'].isin(similar_players)].reset_index(drop='index')
-    return simplayer
