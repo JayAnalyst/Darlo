@@ -26,6 +26,15 @@ if positions == 'Central Defenders':
     with col2:
         create_pizza_plots(data2,[2,3],params,minvalues,maxvalues)
     
+    col3,col4 = st.columns(2)
+    with col3:
+        create_pizza_plots(data2,[4,5],params,minvalues,maxvalues)
+    with col4:
+        create_pizza_plots(data2,[6,7],params,minvalues,maxvalues)
     
+    col5,col6,col7 = st.columns(3)
+    with col6:
+        create_pizza_plots(data2,[8],params,minvalues,maxvalues)
+
     
 
