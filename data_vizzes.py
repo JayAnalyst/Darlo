@@ -48,7 +48,7 @@ def create_pizza_plots(data, indices, params, minvalues, maxvalues):
         # Turn off the axes
 
         # Add a title and subtitle
-        fig.text(0.5, 0.95, f"{data['name'][i]} - {data['current_team_name'][i]}", size=12, ha="center", color="k")
+        fig.text(0.5, 0.95, f"{data['name'][idx]} - {data['current_team_name'][idx]}", size=12, ha="center", color="k")
         #fig.text(0.0, 0.90, f"Minutes played - {data['total_matches'][i]}", size=30, ha="center", fontproperties=font_bold, color="lightgrey")
         #fig.text(0.0, 0.85, f"Z Score = {round(data['z_score'][i], 2)}", size=30, ha='center', fontproperties=font_bold, color='lightgrey')
         
