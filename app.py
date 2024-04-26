@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd 
-from data_vizzes import create_pizza_plots,setup_and_find_similar_players
+from data_vizzes import create_pizza_plots
+from splayers import similarcms,similarcbs
 from mplsoccer import PyPizza, add_image, FontManager
 import matplotlib.pyplot as plt 
 from sklearn.preprocessing import StandardScaler
@@ -21,21 +22,13 @@ if positions == 'Central Defenders':
     data1 = st.dataframe(data.iloc[:,1:].drop_duplicates().reset_index(drop='index').sort_values(roles,ascending=False).reset_index(drop='index'))
     data2 = data.iloc[:,1:].drop_duplicates().reset_index(drop='index').sort_values(roles,ascending=False).reset_index(drop='index')
     st.divider()
-    st.header(f'Best {roles}')
-    params = ['stopper','central defender','ball player','ball carrier','average rating']
-    minvalues = data2.iloc[:,2:7].min().values.tolist()
-    maxvalues = data2.iloc[:,2:7].max().values.tolist()
     col1, col2 = st.columns(2)
     with col1:
-        create_pizza_plots(data2,[0,1],params,minvalues,maxvalues)
+        st.header('Player Similarity Search')
+        player=st.selectbox('Select player',options=data.name.uniuqe().tolist())
     with col2:
-        create_pizza_plots(data2,[2,3],params,minvalues,maxvalues)
-    
-    col3,col4 = st.columns(2)
-    with col3:
-        create_pizza_plots(data2,[4,5],params,minvalues,maxvalues)
-    with col4:
-        create_pizza_plots(data2,[6,7],params,minvalues,maxvalues) 
+        similar_players = similarcbs(data,player,5)
+       
 if positions == 'Central Midfielders':
     roles = st.selectbox(label='Select Role',options = ['Regista_rating','Creative_playmaker_rating','Defensive_midfielder_rating','Box_to_box_rating','Central_midfielder_general_rating','avg_rating'])
     data = load_cms_data()
@@ -47,7 +40,7 @@ if positions == 'Central Midfielders':
         st.header('Player Similarity Search')
         player=st.selectbox('Select player',options=data.name.unique().tolist())
     with col2:
-        similar_players = setup_and_find_similar_players(data,player,5)
+        similar_players = similarcms(data,player,5)
         
         st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:].reset_index(drop='index'))
     
