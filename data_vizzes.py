@@ -93,7 +93,8 @@ def setup_and_find_similar_players(df, player_name, num_players=5):
     similar_players = player_distances.iloc[1:num_players+1].index.tolist()
     
     simplayer = df_clean[df_clean['name'].isin(similar_players)].reset_index(drop='index')
-    return similar_players
+    return simplayer
+    st.dataframe(simplayer)
 
 # Example usage:
 # similar_players = setup_and_find_similar_players('path_to_csv_file.csv', 'D. Weeks')
