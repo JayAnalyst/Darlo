@@ -94,7 +94,7 @@ def setup_and_find_similar_players(df, player_name, num_players=5):
     
     simplayer = df_clean[df_clean['name'].isin(similar_players)].reset_index(drop='index')
     return simplayer
-    st.dataframe(simplayer)
+    
 
 # Example usage:
 # similar_players = setup_and_find_similar_players('path_to_csv_file.csv', 'D. Weeks')

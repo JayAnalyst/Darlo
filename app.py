@@ -48,6 +48,6 @@ if positions == 'Central Midfielders':
         player=st.selectbox('Select player',options=data.name.unique().tolist())
     with col2:
         setup_and_find_similar_players(data,player,5)
-
+        st.dataframe(simplayer)
     
 
