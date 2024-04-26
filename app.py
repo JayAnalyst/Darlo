@@ -49,6 +49,6 @@ if positions == 'Central Midfielders':
     with col2:
         similar_players = setup_and_find_similar_players(data,player,5)
         
-        st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())])
+        st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:])
     
 
