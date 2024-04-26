@@ -10,6 +10,7 @@ def load_cbs_data():
     return pd.read_csv(path)
 def load_cms_data():
     path = 'central_midfielders.csv'
+    return pd.read_csv(path)
 positions = st.selectbox(label='Select position',options = ['Central Defenders','Central Midfielders'])
 if positions == 'Central Defenders':
     roles = st.selectbox(label='Select Role',options = ['stopper_rating','central_defender_rating','ball_playing_center_back_rating','ball_carrying_center_back_rating','avg_rating'])
