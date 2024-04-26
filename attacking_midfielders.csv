@@ -1,0 +1,99 @@
+,name,current_team_name,Number_10_rating,Creator_rating,Shadow_Striker_rating,avg_rating,minutes_on_field
+0,C. Ruff,Chelmsford City,100.0,100.0,92.0,97.33,3578
+1,D. Cashman,Worthing,69.0,93.0,97.0,86.33,3049
+2,L. Coulson,Dartford,73.0,88.0,89.0,83.33,4306
+3,S. Carruthers,Chelmsford City,78.0,88.0,78.0,81.33,2271
+4,J. Barrett,Aldershot Town,75.0,79.0,89.0,81.0,1062
+5,R. Hall,Hampton & Richmond,79.0,100.0,61.0,80.0,994
+6,J. Goddard,Slough Town,69.0,80.0,89.0,79.33,3767
+7,O. Pearce,Worthing,71.0,49.0,100.0,73.33,3996
+8,D. Grubb,Weston-super-Mare,58.0,79.0,78.0,71.67,2711
+9,G. Rasulo,St. Albans City,68.0,76.0,71.0,71.67,4027
+10,W. McGowan,Blyth Spartans,62.0,80.0,69.0,70.33,4264
+11,N. Deverdics,Blyth Spartans,66.0,71.0,72.0,69.67,4096
+12,J. Anifowose,Hampton & Richmond,67.0,79.0,61.0,69.0,1951
+13,R. Ramshaw,Spennymoor Town,65.0,69.0,69.0,67.67,4074
+14,L. Allen,Dartford,66.0,72.0,64.0,67.33,1472
+15,D. Morgan,Yeovil Town,57.0,60.0,76.0,64.33,2205
+16,B. Stephens,King's Lynn Town,63.0,67.0,63.0,64.33,2978
+17,F. Barnes,Scarborough Athletic,54.0,78.0,61.0,64.33,1876
+18,C. Wreh,Tamworth,65.0,50.0,76.0,63.67,1280
+19,R. Aguiar,Swindon Town,60.0,58.0,72.0,63.33,2425
+20,J. Adigun,Welling United,57.0,70.0,61.0,62.67,1491
+21,B. Dixon,Warrington Town,52.0,78.0,58.0,62.67,2028
+22,Z. Banton,St. Albans City,46.0,73.0,66.0,61.67,1810
+23,S. Corne,Maidstone United,58.0,60.0,64.0,60.67,3952
+24,A. Georgiou,Braintree Town,51.0,77.0,46.0,58.0,943
+25,G. Wilkinson,Dover Athletic,61.0,66.0,43.0,56.67,1970
+26,A. Papadopoulos,Welling United,44.0,72.0,53.0,56.33,3268
+27,D. Greenfield,Spennymoor Town,51.0,57.0,57.0,55.0,3096
+28,J. Berkeley-Agyepong,Maidstone United,47.0,71.0,46.0,54.67,1962
+29,K. Ward,Boston United,51.0,61.0,52.0,54.67,2993
+30,G. Williams,Hemel Hempstead Town,44.0,55.0,65.0,54.67,3558
+31,J. Hazlehurst,Chorley,46.0,55.0,62.0,54.33,2618
+32,C. Bradbury,Chippenham Town,49.0,61.0,53.0,54.33,2676
+33,A. Babos,Hereford FC,50.0,52.0,59.0,53.67,3986
+34,T. Elliot,Buxton,50.0,65.0,45.0,53.33,1881
+35,N. Tshikuna,Tamworth,53.0,56.0,49.0,52.67,3233
+36,S. Mantom,Rushall Olympic,48.0,55.0,51.0,51.33,936
+37,M. Weiss,St. Albans City,45.0,43.0,65.0,51.0,3232
+38,E. Williams,Chippenham Town,46.0,57.0,48.0,50.33,2146
+39,L. D'Ath,Hereford FC,38.0,58.0,49.0,48.33,3281
+40,L. Reynolds,Maidstone United,38.0,47.0,59.0,48.0,2088
+41,H. Parsons,Weymouth,48.0,58.0,37.0,47.67,1900
+42,G. Hoddle,St. Albans City,35.0,50.0,56.0,47.0,2042
+43,J. Nicholson,Peterborough Sports,46.0,43.0,48.0,45.67,1057
+44,R. Lambe,Braintree Town,41.0,52.0,42.0,45.0,3063
+45,F. Nouble,Yeovil Town,37.0,42.0,55.0,44.67,3794
+46,G. Glendon,Chester,44.0,44.0,46.0,44.67,3682
+47,J. Turner,Tonbridge Angels,34.0,52.0,47.0,44.33,1026
+48,D. Aransibia,Tonbridge Angels,39.0,51.0,43.0,44.33,1753
+49,J. Armson,Brackley Town,42.0,54.0,35.0,43.67,1894
+50,M. Dabre,Tonbridge Angels,33.0,48.0,50.0,43.67,2585
+51,J. Dodd,Weston-super-Mare,35.0,52.0,42.0,43.0,3475
+52,R. Coleman,Aveley,29.0,42.0,57.0,42.67,2213
+53,L. Colville,Scarborough Athletic,35.0,51.0,41.0,42.33,4369
+54,A. Wiles,Scarborough Athletic,31.0,51.0,43.0,41.67,2780
+55,T. Maloney,Dartford,41.0,32.0,51.0,41.33,2024
+56,D. Jarvis,Peterborough Sports,34.0,38.0,49.0,40.33,2756
+57,R. Mannings,Weston-super-Mare,29.0,43.0,49.0,40.33,1804
+58,I. Allen,Dover Athletic,20.0,52.0,49.0,40.33,1229
+59,F. Maguire,Chorley,35.0,50.0,34.0,39.67,2070
+60,J. Ponticelli,King's Lynn Town,42.0,31.0,44.0,39.0,1374
+61,M. Roberts,Brackley Town,31.0,32.0,53.0,38.67,2594
+62,I. Akanbi,St. Albans City,35.0,30.0,51.0,38.67,1891
+63,M. Linton,Weymouth,32.0,30.0,52.0,38.0,1187
+64,L. Gard,Tonbridge Angels,35.0,38.0,41.0,38.0,3211
+65,T. Bramble,Welling United,24.0,47.0,41.0,37.33,1385
+66,M. Jackson,Weston-super-Mare,35.0,40.0,37.0,37.33,1581
+67,K. Crichlow,Bishop's Stortford,20.0,37.0,53.0,36.67,1302
+68,A. Williams,Hereford FC,41.0,23.0,45.0,36.33,1343
+69,S.  Fish,Welling United,23.0,34.0,51.0,36.0,1719
+70,D. Lloyd-McGoldrick,Southport,28.0,38.0,38.0,34.67,950
+71,A. Hernandez,Aveley,34.0,29.0,39.0,34.0,1235
+72,H. Young,Dover Athletic,37.0,39.0,24.0,33.33,1732
+73,I. Sinclair,Curzon Ashton,23.0,40.0,35.0,32.67,3507
+74,J. Hmami,Southport,28.0,36.0,33.0,32.33,3107
+75,L. Waldock,Alfreton Town,32.0,23.0,42.0,32.33,3770
+76,R. Carr,Aveley,28.0,36.0,33.0,32.33,1069
+77,T. Owen-Evans,Chippenham Town,22.0,35.0,37.0,31.33,1081
+78,M. Grivosti,Warrington Town,15.0,34.0,39.0,29.33,2194
+79,Kelly Garrett,Aveley,23.0,36.0,27.0,28.67,2942
+80,A. Krasniqi,Aveley,26.0,36.0,21.0,27.67,3451
+81,A. Janneh,Tonbridge Angels,22.0,22.0,38.0,27.33,933
+82,R. Bennett,Southport,31.0,21.0,29.0,27.0,2392
+83,C. Jones,Chelmsford City,27.0,23.0,27.0,25.67,1483
+84,B. Brown,Hampton & Richmond,22.0,23.0,30.0,25.0,1239
+85,A. Rooney,Hereford FC,30.0,25.0,20.0,25.0,1561
+86,J. Ngandu,Darlington 1883,23.0,28.0,23.0,24.67,1271
+87,J. Beckford,Eastbourne Borough,23.0,38.0,13.0,24.67,963
+88,J. McCammon,Peterborough Sports,12.0,27.0,34.0,24.33,3897
+89,I. Murray,Chester,20.0,29.0,24.0,24.33,2146
+90,A. Landell,Rushall Olympic,21.0,22.0,29.0,24.0,1404
+91,Teddy Rowe,Gloucester City,18.0,23.0,29.0,23.33,1263
+92,T. Bearwish,Weymouth,18.0,15.0,24.0,19.0,3715
+93,R. Stearn,Taunton Town,19.0,11.0,24.0,18.0,2644
+94,C. Ubaezuonu,Chorley,13.0,6.0,34.0,17.67,2593
+95,K. Charles,Banbury United,11.0,11.0,29.0,17.0,3840
+96,T. Deacon,Tamworth,10.0,4.0,19.0,11.0,1671
+97,J. Ackroyd,Buxton,0.0,0.0,0.0,0.0,1380

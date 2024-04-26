@@ -14,7 +14,11 @@ def load_cbs_data():
 def load_cms_data():
     path = 'central_midfielders.csv'
     return pd.read_csv(path)
-positions = st.selectbox(label='Select position',options = ['Central Defenders','Central Midfielders'])
+def load_ams_data():
+    path = 'attacking_midfielders.csv'
+    return pd.read_csv(path)
+
+positions = st.selectbox(label='Select position',options = ['Central Defenders','Central Midfielders','Attacking Midfielders'])
 if positions == 'Central Defenders':
     roles = st.selectbox(label='Select Role',options = ['stopper_rating','central_defender_rating','ball_playing_center_back_rating','ball_carrying_center_back_rating','avg_rating'])
 if positions == 'Central Defenders':
@@ -46,4 +50,7 @@ if positions == 'Central Midfielders':
         
         st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:].reset_index(drop='index'))
     
-
+if positions == 'Attacking Midfielders':
+    roles = st.selectbox(label = 'Select Role', options = ['Number_10_rating','Creator_rating','Shadow_striker_rating','avg_rating'])
+    data = load_ams_data()
+    data1 = st.dataframe(data.iloc[:,1:].drop_duplicates().reset_index(drop='index').sort_values(roles,ascending=False).reset_index(drop='index'))
