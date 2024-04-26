@@ -2,4 +2,4 @@ mplsoccer
 pandas
 plotly
 streamlit
-sklearn
+Scikit-learn
