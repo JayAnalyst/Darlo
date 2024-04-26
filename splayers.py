@@ -52,13 +52,19 @@ def similarcbs(df, player_name, num_players=5):
     
     # Find similar players function
     if player_name not in distance_df.index:
-        return "Player not found. Please check the name and try again."
+        return f"Player not found. Please check the name '{player_name}' and try again."
     
-    player_distances = distance_df[player_name].sort_values()
-    similar_players = player_distances.iloc[1:num_players+1].index.tolist()
-    if similar_players:
-        simplayer = df_clean[df_clean['name'].isin(similar_players)].reset_index(drop=True)
-        return simplayer
-    else:
-        return "No similar players."
+    try:
+        # Get the sorted distances and extract similar players
+        player_distances = distance_df[player_name].sort_values()
+        similar_players = player_distances.iloc[1:num_players+1].index.tolist()
+        
+        # Check if similar players are found and return results
+        if similar_players:
+            simplayer = df_clean[df_clean['name'].isin(similar_players)].reset_index(drop=True)
+            return simplayer
+        else:
+            return "No similar players."
+    except Exception as e:
+        return f"An error occurred while finding similar players: {e}"
     
