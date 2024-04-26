@@ -25,7 +25,7 @@ if positions == 'Central Defenders':
     col1, col2 = st.columns(2)
     with col1:
         st.header('Player Similarity Search')
-        player=st.selectbox('Select player',options=data.name.uniuqe().tolist())
+        player=st.selectbox('Select player',options=data.name.unique().tolist())
     with col2:
         similar_players = similarcbs(data,player,5)
        
