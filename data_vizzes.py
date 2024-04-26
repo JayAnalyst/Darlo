@@ -28,8 +28,7 @@ def create_pizza_plots(data, indices, params, minvalues, maxvalues):
 
         # plot pizza
         baker.make_pizza(
-            values,  # list of values
-            ax=ax1,  # Use the new axis
+            values,  # Use the new axis
             color_blank_space="same",  # use same color to fill blank space
             blank_alpha=0.4,  # alpha for blank-space colors
             param_location=110,  # where the parameters will be added
