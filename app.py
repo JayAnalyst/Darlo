@@ -61,6 +61,6 @@ if positions == 'Attacking Midfielders':
         st.header('Player Similarity Search')
         player=st.selectbox('Select player',options=data.name.unique().tolist())
     with col2:
-        similar_players = similarams(data,player,5)
+        similar_players = similarams(data,player,3)
         
         st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:].reset_index(drop='index'))
