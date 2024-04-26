@@ -47,7 +47,7 @@ if positions == 'Central Midfielders':
         st.header('Player Similarity Search')
         player=st.selectbox('Select player',options=data.name.unique().tolist())
     with col2:
-        setup_and_find_similar_players(data,player,5)
-        st.dataframe(simplayer)
+        similar_players = setup_and_find_similar_players(data,player,5)
+        st.dataframe(similar_players)
     
 
