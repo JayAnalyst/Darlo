@@ -2,3 +2,4 @@ mplsoccer
 pandas
 plotly
 streamlit
+sklearn
