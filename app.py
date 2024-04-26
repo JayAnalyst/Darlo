@@ -3,6 +3,8 @@ import pandas as pd
 from data_vizzes import create_pizza_plots,setup_and_find_similar_players
 from mplsoccer import PyPizza, add_image, FontManager
 import matplotlib.pyplot as plt 
+from sklearn.preprocessing import StandardScaler
+from scipy.spatial.distance import cdist
 st.set_page_config(layout="wide")
 
 def load_cbs_data():
