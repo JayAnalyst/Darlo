@@ -8,7 +8,9 @@ st.set_page_config(layout="wide")
 def load_cbs_data():
     path = 'central_defenders.csv'
     return pd.read_csv(path)
-positions = st.selectbox(label='Select position',options = ['Central Defenders'])
+def load_cms_data():
+    path = 'central_midfielders.csv'
+positions = st.selectbox(label='Select position',options = ['Central Defenders','Central Midfielders'])
 if positions == 'Central Defenders':
     roles = st.selectbox(label='Select Role',options = ['stopper_rating','central_defender_rating','ball_playing_center_back_rating','ball_carrying_center_back_rating','avg_rating'])
 if positions == 'Central Defenders':
@@ -30,11 +32,11 @@ if positions == 'Central Defenders':
     with col3:
         create_pizza_plots(data2,[4,5],params,minvalues,maxvalues)
     with col4:
-        create_pizza_plots(data2,[6,7],params,minvalues,maxvalues)
-    
-    col5,col6,col7 = st.columns(3)
-    with col6:
-        create_pizza_plots(data2,[8],params,minvalues,maxvalues)
+        create_pizza_plots(data2,[6,7],params,minvalues,maxvalues) 
+if positions == 'Central Midfielders':
+    roles = st.selectbox(label='Select Role',options = ['Regista_rating','Creative_playmaker_rating','Defensive_midfielder_rating','Box_to_box_rating','Central_midfielder_general_rating','avg_rating'])
+    data = load_cms_data()
+    data1 = st.dataframe(data.iloc[:,1:].drop_duplicates().reset_index(drop='index').sort_values(roles,ascending=False).reset_index(drop='index'))
 
     
 
