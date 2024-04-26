@@ -75,7 +75,7 @@ def similarams(df, player_name, num_players=3):
     df_clean = df.drop_duplicates().reset_index(drop=True)
     
     # Focus on the rating columns for similarity
-    rating_columns = ['Number_10_rating','Creator_rating','Shadow_striker_rating','avg_rating']
+    rating_columns = ['Number_10_rating','Creator_rating','Shadow_Striker_rating','avg_rating']
     
     # Standardizing the rating columns
     scaler = StandardScaler()
