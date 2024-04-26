@@ -28,6 +28,8 @@ if positions == 'Central Defenders':
         player=st.selectbox('Select player',options=data.name.unique().tolist())
     with col2:
         similar_players = similarcbs(data,player,5)
+        st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:].reset_index(drop='index'))
+
        
 if positions == 'Central Midfielders':
     roles = st.selectbox(label='Select Role',options = ['Regista_rating','Creative_playmaker_rating','Defensive_midfielder_rating','Box_to_box_rating','Central_midfielder_general_rating','avg_rating'])
