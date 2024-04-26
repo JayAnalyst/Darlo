@@ -8,22 +8,28 @@ def create_pizza_plots(data, indices, params, minvalues, maxvalues):
     font_normal = FontProperties(family='sans-serif', style='normal', size=12)
     font_bold = FontProperties(family='sans-serif', weight='bold', size=14)
 
-    # Prepare data list and parameters
-    values_list = [data.iloc[idx, 2:7].values.tolist() for idx in indices]
-    baker = PyPizza(
-        params=params,
-        min_range=minvalues,  # min range values
-        max_range=maxvalues,  # max range values
-        background_color="#ffffff", straight_line_color="#000000",
-        last_circle_color="#000000", last_circle_lw=2.5, straight_line_lw=1,
-        other_circle_lw=0, other_circle_color="#000000", inner_circle_size=20,
-    )
+    # Loop over indices and create a pizza plot for each
+    for i in indices:
+        # Prepare data for the current index
+        values = data.iloc[i, 2:7].values.tolist()
+        
+        # Create new figure and axis for each plot
+        fig, ax1 = plt.subplots(figsize=(12, 6))
+        
+        # Create a pizza plot baker
+        baker = PyPizza(
+            params=params,
+            min_range=minvalues,  # min range values
+            max_range=maxvalues,  # max range values
+            background_color="#ffffff", straight_line_color="#000000",
+            last_circle_color="#000000", last_circle_lw=2.5, straight_line_lw=1,
+            other_circle_lw=0, other_circle_color="#000000", inner_circle_size=20,
+        )
 
-    for i, values in enumerate(values_list):
         # plot pizza
-        fig, ax1 = baker.make_pizza(
+        baker.make_pizza(
             values,  # list of values
-            figsize=(12, 6),  # adjust figsize according to your need
+            ax=ax1,  # Use the new axis
             color_blank_space="same",  # use same color to fill blank space
             blank_alpha=0.4,  # alpha for blank-space colors
             param_location=110,  # where the parameters will be added
@@ -45,15 +51,12 @@ def create_pizza_plots(data, indices, params, minvalues, maxvalues):
             )  # values to be used when adding parameter-values
         )
 
-        # Turn off the axes
-    for i in range(len(values_list)):
         # Add a title and subtitle
         fig.text(0.5, 0.95, f"{data['name'][i]} - {data['current_team_name'][i]}", size=12, ha="center", color="k")
-        #fig.text(0.0, 0.90, f"Minutes played - {data['total_matches'][i]}", size=30, ha="center", fontproperties=font_bold, color="lightgrey")
-        #fig.text(0.0, 0.85, f"Z Score = {round(data['z_score'][i], 2)}", size=30, ha='center', fontproperties=font_bold, color='lightgrey')
         
-        # Show the plot
+        # Show the plot with Streamlit
         st.pyplot(fig)
 
-# Example usage:
-# create_pizza_plots(data, [0, 1, 2, 3, 4], params, minvalues, maxvalues)
+
+    # Example usage:
+    # create_pizza_plots(data, [0, 1, 2, 3, 4], params, minvalues, maxvalues)
