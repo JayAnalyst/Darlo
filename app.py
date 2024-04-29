@@ -57,7 +57,7 @@ if positions == 'Central Midfielders':
         st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:].reset_index(drop='index'))
     
 if positions == 'Attacking Midfielders':
-    roles = st.selectbox(label = 'Select Role', options = ['Number_10_rating','Creator_rating','Shadow_striker_rating','avg_rating'])
+    roles = st.selectbox(label = 'Select Role', options = ['Number_10_rating','Creator_rating','Shadow_Striker_rating','avg_rating'])
     data = load_ams_data()
     data1 = st.dataframe(data.iloc[:,1:].drop_duplicates().reset_index(drop='index').sort_values(roles,ascending=False).reset_index(drop='index'))
     st.divider()
