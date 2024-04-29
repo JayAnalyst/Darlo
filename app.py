@@ -101,4 +101,4 @@ if positions == 'Forwards':
         st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:].reset_index(drop='index'))
 
     
-    
+      
