@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd 
-from data_vizzes import create_pizza_plots
+from data_vizzes import create_pizza_plots,filter_df_by_category
 from splayers import similarcms,similarcbs,similarams,similarwing,similarstriker
 from mplsoccer import PyPizza, add_image, FontManager
 import matplotlib.pyplot as plt 
@@ -10,6 +10,9 @@ st.set_page_config(layout="wide")
 
 def load_cbs_data():
     path = 'central_defenders.csv'
+    return pd.read_csv(path)
+def load_allstats():
+    path = 'AllPlayers.csv'
     return pd.read_csv(path)
 def load_cms_data():
     path = 'central_midfielders.csv'
@@ -55,6 +58,7 @@ if positions == 'Central Midfielders':
         similar_players = similarcms(data,player,5)
         
         st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:].reset_index(drop='index'))
+
     
 if positions == 'Attacking Midfielders':
     roles = st.selectbox(label = 'Select Role', options = ['Number_10_rating','Creator_rating','Shadow_Striker_rating','avg_rating'])
@@ -101,4 +105,222 @@ if positions == 'Forwards':
         st.dataframe(data[data['name'].isin(similar_players.name.unique().tolist())].iloc[:,1:].reset_index(drop='index'))
 
     
-      
+st.divider()
+st.header('Player statistics vs Position average')
+pos = st.selectbox('Select Player Position',options = ['Central Defender','Central Midfielder','Attacking Midfielder','Winger','Striker'])
+if pos == 'Central Midfielder':
+    data1 = load_cms_data()
+    data2 = load_allstats()
+    data2 = data2[(data2['name'].isin(data1.name.to_list()) & (data2['current_team_name'].isin(data1.current_team_name.to_list())))]
+    player1 = st.selectbox('Select Player',options=sorted(data2.name.tolist()))
+    met = st.selectbox('Select statistic group',options=['Defensive','Attacking','Passes','Key Passes'])
+    col1,col2,col3 = st.columns(3)
+    with col2:
+        if met == 'Defensive':
+            filtered_data = filter_df_by_category(data2,'defensive')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'defensive').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Attacking':
+            filtered_data = filter_df_by_category(data2,'attacking')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'attacking').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Passes':
+            filtered_data = filter_df_by_category(data2,'passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Key Passes':
+            filtered_data = filter_df_by_category(data2,'key passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'key passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))       
+if pos == 'Central Defender':
+    data1 = load_cbs_data()
+    data2 = load_allstats()
+    data2 = data2[(data2['name'].isin(data1.name.to_list()) & (data2['current_team_name'].isin(data1.current_team_name.to_list())))]
+    player1 = st.selectbox('Select Player',options=sorted(data2.name.tolist()))
+    met = st.selectbox('Select statistic group',options=['Defensive','Attacking','Passes','Key Passes'])
+    col1,col2,col3 = st.columns(3)
+    with col2:
+        if met == 'Defensive':
+            filtered_data = filter_df_by_category(data2,'defensive')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'defensive').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Attacking':
+            filtered_data = filter_df_by_category(data2,'attacking')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'attacking').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Passes':
+            filtered_data = filter_df_by_category(data2,'passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Key Passes':
+            filtered_data = filter_df_by_category(data2,'key passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'key passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))       
+
+if pos == 'Attacking Midfielder':
+    data1 = load_ams_data()
+    data2 = load_allstats()
+    data2 = data2[(data2['name'].isin(data1.name.to_list()) & (data2['current_team_name'].isin(data1.current_team_name.to_list())))]
+    player1 = st.selectbox('Select Player',options=sorted(data2.name.tolist()))
+    met = st.selectbox('Select statistic group',options=['Defensive','Attacking','Passes','Key Passes'])
+    col1,col2,col3 = st.columns(3)
+    with col2:
+        if met == 'Defensive':
+            filtered_data = filter_df_by_category(data2,'defensive')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'defensive').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Attacking':
+            filtered_data = filter_df_by_category(data2,'attacking')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'attacking').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Passes':
+            filtered_data = filter_df_by_category(data2,'passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Key Passes':
+            filtered_data = filter_df_by_category(data2,'key passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'key passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))       
+if pos == 'Winger':
+    data1 = load_wing_data()
+    data2 = load_allstats()
+    data2 = data2[(data2['name'].isin(data1.name.to_list()) & (data2['current_team_name'].isin(data1.current_team_name.to_list())))]
+    player1 = st.selectbox('Select Player',options=sorted(data2.name.tolist()))
+    met = st.selectbox('Select statistic group',options=['Defensive','Attacking','Passes','Key Passes'])
+    col1,col2,col3 = st.columns(3)
+    with col2:
+        if met == 'Defensive':
+            filtered_data = filter_df_by_category(data2,'defensive')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'defensive').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Attacking':
+            filtered_data = filter_df_by_category(data2,'attacking')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'attacking').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Passes':
+            filtered_data = filter_df_by_category(data2,'passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Key Passes':
+            filtered_data = filter_df_by_category(data2,'key passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'key passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))      
+if pos == 'Striker':
+    data1 = load_strikers_data()
+    data2 = load_allstats()
+    data2 = data2[(data2['name'].isin(data1.name.to_list()) & (data2['current_team_name'].isin(data1.current_team_name.to_list())))]
+    player1 = st.selectbox('Select Player',options=sorted(data2.name.tolist()))
+    met = st.selectbox('Select statistic group',options=['Defensive','Attacking','Passes','Key Passes'])
+    col1,col2,col3 = st.columns(3)
+    with col2:
+        if met == 'Defensive':
+            filtered_data = filter_df_by_category(data2,'defensive')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'defensive').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Attacking':
+            filtered_data = filter_df_by_category(data2,'attacking')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'attacking').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Passes':
+            filtered_data = filter_df_by_category(data2,'passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))
+    with col2:
+        if met == 'Key Passes':
+            filtered_data = filter_df_by_category(data2,'key passing')
+            filtered_data1 = filter_df_by_category(data2[data2['name']==player1],'key passing').reset_index(drop='index')
+            filtered_data2 = pd.DataFrame(filtered_data1.loc[0])
+            filtered_mean = filtered_data.mean().reset_index()[0].to_list()
+            player_data = filtered_data2.round(2)
+            player_data['League average'] = filtered_mean
+            st.write(player_data.rename(columns={0:'Player Stats'}).round(2))  
