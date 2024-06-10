@@ -1,0 +1,17 @@
+,name,current_team_name,last_club_name,main_position,positions,total_matches,minutes_on_field,conceded_goals,prevented_goals_avg,shots_against,save_percent,clean_sheets,aerial_duels_avg,aerial_duels_won,accurate_passes_percent
+0,L. Thomas,Bromley,Bromley,GK,['GK'],1,101,2,-0.481,4,50.0,0,0.0,0.0,76.19
+1,D. Stockdale,York City,York City,GK,['GK'],4,351,6,-0.038,16,62.5,0,0.77,66.67,80.95
+2,J. Sheik,Aldershot Town,Aldershot Town,GK,['GK'],1,102,4,-0.318,7,42.86,0,0.0,0.0,66.67
+3,T. Sharman-Lowe,Chelsea U21,Bromley,GK,['GK'],1,103,2,-1.075,3,33.33,0,0.0,0.0,88.24
+4,M. Norman,Oldham Athletic,Oldham Athletic,GK,['GK'],2,214,5,-0.778,14,64.29,0,0.0,0.0,65.96
+5,C. Neal,Fylde,Fylde,GK,['GK'],1,100,3,-0.45,6,50.0,0,0.9,100.0,81.82
+6,M. Metcalfe,Fylde,Fylde,GK,['GK'],3,306,7,-0.435,21,66.67,0,1.47,80.0,82.05
+7,S. Hornby,Colchester United,Solihull Moors,GK,['GK'],3,301,10,-1.079,17,41.18,0,0.3,100.0,74.24
+8,N. Harness,Milton Keynes Dons,Gateshead,GK,['GK'],6,551,6,0.072,18,66.67,1,0.33,100.0,77.06
+9,A. Flahavan,Solihull Moors,Solihull Moors,GK,['GK'],1,100,1,0.441,3,66.67,0,0.9,0.0,60.87
+10,J. Day,Yeovil Town,Woking,GK,['GK'],2,205,4,-0.707,4,0.0,0,0.0,0.0,63.16
+11,J. Chapman,Huddersfield Town,Rochdale,GK,['GK'],6,597,4,0.142,21,80.95,2,0.6,100.0,86.03
+12,M. Brzozowski,Oxford City,Oxford City,GK,['GK'],6,596,16,-0.362,45,64.44,1,0.3,100.0,80.95
+13,R. Boot,Chesterfield,Chesterfield,GK,['GK'],4,409,6,-0.418,17,64.71,1,0.44,100.0,86.21
+14,H. Bond,Gateshead,Gateshead,GK,['GK'],2,198,3,-0.5,7,57.14,0,0.0,0.0,82.0
+15,E. Beach,Gateshead,Gateshead,GK,['GK'],5,502,9,-0.007,28,67.86,1,0.72,75.0,83.66
