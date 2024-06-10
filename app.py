@@ -6,7 +6,7 @@ from mplsoccer import PyPizza, add_image, FontManager
 import matplotlib.pyplot as plt 
 from sklearn.preprocessing import StandardScaler
 from scipy.spatial.distance import cdist
-#st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 def load_cbs_data():
     path = 'central_defenders.csv'
@@ -33,7 +33,7 @@ def load_fringe_cbs():
     path = 'fringe_cbs'
     return pd.read_csv(path)
 def load_fringe_fbs():
-    path = 'fringe_fbs'
+    path = 'Fringe_fbs'
     return pd.read_csv(path)
 
 radio_box = st.radio(label='Select Version',options=['North/South Players 23/24','National League Fringe 23/24'])
