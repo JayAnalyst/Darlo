@@ -35,6 +35,15 @@ def load_fringe_cbs():
 def load_fringe_fbs():
     path = 'Fringe_fbs'
     return pd.read_csv(path)
+def load_fringe_cms():
+    path = 'fringe_cms'
+    return pd.read_csv(path)
+def load_fringe_winger_attackingmids():
+    path = 'fringe_wing_ams'
+    return pd.read_csv(path)
+def load_fringe_cf():
+    path = 'fringe_cf'
+    return pd.read_csv(path)
 
 radio_box = st.radio(label='Select Version',options=['North/South Players 23/24','National League Fringe 23/24'])
 if radio_box == 'North/South Players 23/24':
@@ -345,5 +354,14 @@ if radio_box == 'National League Fringe 23/24':
     st.title('Full/Wing Backs')
     fbs = load_fringe_fbs()
     st.write(fbs.iloc[:,1:])
+    st.title('Central Midfielders (DM/CM)')
+    cms = load_fringe_cms()
+    st.write(cms.iloc[:,1:])
+    st.title('Attacking Midfielders and Wingers')
+    amwing = load_fringe_winger_attackingmids()
+    st.write(amwing.iloc[:,1:])
+    st.title('Center Forwards')
+    cfs = load_fringe_cf()
+    st.write(cfs.iloc[:,1:])
 
 

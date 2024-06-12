@@ -1,0 +1,37 @@
+,name,current_team_name,last_club_name,main_position,positions,total_matches,minutes_on_field,successful_attacking_actions_avg,shots_avg,xg_shot,xg_assist,crosses_avg,accurate_crosses_percent,foul_suffered_avg,progressive_run_avg,progressive_pass_avg
+0,M. Williams,AFC Wimbledon,Woking,RW,"['RW', 'LAMF', 'LW']",7,474,0.38,0.19,0.28,0.39,1.14,16.67,1.71,1.52,4.18
+1,D. Ward,Oldham Athletic,Oldham Athletic,LW,"['LW', 'LCMF3', 'LCMF']",7,299,3.61,2.11,0.45,0.25,1.81,50.0,0.9,1.2,4.21
+2,E. Walker,Oldham Athletic,Oldham Athletic,RW,"['RW', 'LW']",3,126,0.71,1.43,0.14,0.0,0.71,0.0,1.43,1.43,0.71
+3,C. Wakefield,Braintree Town,Woking,RW,"['RW', 'LW', 'RAMF']",7,278,4.53,0.32,0.18,0.44,2.91,33.33,0.65,1.62,2.59
+4,B. Tollitt,Kidderminster Harriers,Kidderminster Harriers,RW,"['RW', 'CF', 'LAMF']",11,510,3.88,1.76,0.38,1.2,2.82,31.25,0.88,1.94,4.06
+5,C. Senior,Barnet,Barnet,RW,"['RW', 'RAMF', 'RWB']",13,547,5.1,1.65,0.97,1.01,4.28,34.62,0.66,4.77,5.59
+6,D. De Silva,Wealdstone,Wealdstone,RW,"['RW', 'RAMF', 'RWB']",8,596,6.95,2.11,1.33,0.93,6.95,32.61,1.66,3.32,4.68
+7,J. Rowley,Fylde,Fylde,LAMF,"['LAMF', 'RAMF']",8,199,3.17,1.36,0.11,0.05,2.71,33.33,0.45,1.36,4.07
+8,S. Remy,Dagenham & Redbridge,Dagenham & Redbridge,RW,"['RW', 'RAMF']",9,492,3.29,0.91,0.23,0.32,1.83,40.0,0.91,1.1,4.76
+9,R. Pedder,Queens Park Rangers,Oxford City,LAMF,"['LAMF', 'RAMF', 'AMF']",4,318,3.68,2.26,0.75,0.37,1.7,16.67,1.13,6.79,1.7
+10,H. Parsons,Weymouth,Maidenhead United,AMF,"['AMF', 'CF', 'LAMF']",12,457,1.58,0.79,0.62,0.72,0.2,0.0,0.2,0.59,1.97
+11,P. Osew,Woking,Woking,RAMF,"['RAMF', 'LCMF3']",5,261,3.45,1.72,0.46,0.98,2.41,42.86,1.38,1.03,2.76
+12,D. Omilabu,Maidenhead United,Maidenhead United,RAMF,"['RAMF', 'RW', 'CF']",13,510,2.82,0.53,0.07,0.23,2.29,15.38,1.24,1.41,1.94
+13,T. Miller,Bromley,Kidderminster Harriers,LW,"['LW', 'LWB', 'LB5']",17,522,3.28,1.38,0.27,0.06,3.45,25.0,1.38,3.28,2.93
+14,A. McQueen,Oxford City,Oxford City,LAMF,"['LAMF', 'RWB', 'RAMF']",5,292,1.85,1.54,0.8,0.83,2.47,50.0,1.54,0.0,5.24
+15,S. Mather,Manchester United U21,Rochdale,LW,"['LW', 'LCMF3', 'LB5']",10,584,3.39,1.85,1.6,0.11,1.54,20.0,0.77,2.31,3.39
+16,J. Maguire-Drew,Yeovil Town,Barnet,AMF,"['AMF', 'RW', 'RCMF3']",12,562,2.4,1.28,0.45,1.34,4.32,29.63,0.0,1.6,6.09
+17,L. Lumeka,Oxford City,Oxford City,RW,"['RW', 'RWB', 'LWB']",6,262,4.12,0.69,0.32,0.43,2.75,50.0,0.34,3.09,3.09
+18,J. Lee Barrett,Aldershot Town,Aldershot Town,AMF,['AMF'],6,192,2.34,2.81,0.55,0.5,0.94,0.0,0.0,0.47,2.81
+19,C. Lawless,Dagenham & Redbridge,Dagenham & Redbridge,AMF,"['AMF', 'LCMF', 'CF']",7,270,2.0,0.67,0.58,0.02,1.33,50.0,1.67,0.33,5.33
+20,J. Jenkins,Halifax Town,Halifax Town,AMF,"['AMF', 'LDMF', 'RDMF']",11,410,1.54,0.88,0.41,0.1,0.44,0.0,1.1,1.98,4.17
+21,A. Hurst,Macclesfield Town,York City,RW,"['RW', 'LAMF', 'LB']",5,130,6.92,0.69,0.09,0.1,5.54,37.5,1.38,3.46,6.92
+22,A. Hunter,Fylde,Fylde,LAMF,"['LAMF', 'LW']",12,421,4.7,2.99,0.74,0.44,1.92,22.22,1.07,2.14,4.49
+23,G. Hooper,Barnet,Barnet,AMF,"['AMF', 'CF']",6,179,1.51,1.51,1.88,0.09,0.5,0.0,0.0,0.0,1.01
+24,C. Harriott,York City,York City,RAMF,"['RAMF', 'RW', 'LW']",7,387,2.79,1.63,0.56,0.48,1.86,25.0,0.47,0.7,2.56
+25,J. Emmanuel-Thomas,Kidderminster Harriers,Kidderminster Harriers,AMF,"['AMF', 'CF', 'DMF']",8,371,2.43,2.67,0.8,0.95,0.97,50.0,0.49,0.49,7.04
+26,O. Crankshaw,Altrincham,Altrincham,LAMF,"['LAMF', 'RAMF', 'CF']",2,144,2.5,2.5,0.76,0.01,1.88,0.0,0.63,3.13,0.63
+27,C. Cooper,Hartlepool United,Hartlepool United,LAMF,"['LAMF', 'RAMF', 'RW']",9,338,3.2,1.86,0.67,0.42,3.73,21.43,1.07,1.07,4.26
+28,Quévin Castro,York City,York City,AMF,"['AMF', 'CF', 'RW']",14,588,2.23,1.76,1.03,0.08,0.96,16.67,0.8,0.96,3.35
+29,D. Bughail-Mellor,Wycombe Wanderers,Rochdale,LW,"['LW', 'CF']",9,594,2.27,1.97,2.46,0.23,0.3,0.0,0.76,1.67,2.73
+30,N. Boateng,Solihull Moors,Solihull Moors,LAMF,"['LAMF', 'LW', 'RW']",14,611,5.01,1.03,0.54,2.09,4.71,43.75,1.03,1.91,3.24
+31,J. Barrett,Aldershot Town,Aldershot Town,AMF,['AMF'],6,181,4.97,4.48,0.77,0.64,1.49,100.0,0.5,2.98,4.48
+32,F. Barnes,Scarborough Athletic,York City,RW,"['RW', 'AMF', 'RAMF']",6,267,4.38,1.01,0.17,0.44,1.35,25.0,1.69,1.01,2.02
+33,C. Allen,York City,York City,RW,"['RW', 'RCMF3', 'RAMF']",4,289,4.67,2.18,0.97,0.03,2.18,42.86,1.25,2.8,3.74
+34,M. Afuye,Rochdale,Rochdale,LW,"['LW', 'RW', 'RAMF']",8,282,4.47,0.96,0.1,0.12,2.55,0.0,1.28,1.91,1.28
+35,A. Abdulmalik,Millwall U21,Wealdstone,AMF,"['AMF', 'CF', 'LWF']",9,501,5.93,2.51,0.88,0.73,0.72,50.0,0.18,4.67,5.03
